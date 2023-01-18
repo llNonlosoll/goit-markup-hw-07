@@ -525,6 +525,7 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 
 @media screen and (min-width: 1200px) {
   .hero {
+    max-width: 1600px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office-pc.jpg);
   }
@@ -534,6 +535,7 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   (min-width: 1200px) and (min-resolution: 192dpi),
   (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
+    max-width: 1600px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
       url(../images/people-office-pc@2x.jpg);
   }
@@ -1142,6 +1144,10 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   margin-bottom: 40px;
 }
 
+.mobile-nav .link.current {
+  color: var(--accent-secondary);
+}
+
 .mobile-nav {
   margin-bottom: auto;
 }
@@ -1153,12 +1159,7 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
   color: var(--main-text-color);
 }
 
-.mobile-contacts .item:not(:last-child) {
-  margin-bottom: 40px;
-}
-
-.mobile-contacts .link:hover,
-.mobile-contacts .link:focus {
+.mobile-contacts .phone {
   font-weight: 600;
   font-size: 24px;
   line-height: 1.11;
@@ -1166,15 +1167,19 @@ ul {margin-top: 0; margin-bottom: 0; padding-left: 0;} */
 }
 
 @media screen and (min-width: 428px) and (max-width: 767px) {
-  .mobile-contacts .link:hover,
-  .mobile-contacts .link:focus {
+  .mobile-contacts .phone {
     font-size: 36px;
   }
+}
+
+.mobile-contacts .item:not(:last-child) {
+  margin-bottom: 40px;
 }
 
 .mobile-list-social-media {
   display: flex;
   justify-content: space-between;
+  max-width: 328px;
   margin-top: 48px;
 }
 
